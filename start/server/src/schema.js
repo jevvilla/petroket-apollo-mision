@@ -26,6 +26,12 @@ const typeDefs = gql`
     missionPatch(size: PatchSize): String
   }
 
+  type TripUpdateResponse {
+    success: Boolean!
+    message: String
+    launches: [Launch]
+  }
+
   enum PatchSize {
     SMALL
     LARGE
